@@ -16,7 +16,11 @@ Dalam aplikasi ini terdapat 2 user, yaitu admin atau penjual kebutuhan pertanian
 Untuk saat ini kami masih mengembangkan aplikasi ini dari sisi customer. Untuk customer terdapat beberapa fitur yang disediakan dalam aplikasi ini, diantaranya yaitu:
 
 Fitur dashboard : fitur berupa pengenalan atau deskripsi singkat mengenai aplikasi farm indo kepada user/customer
+
 Fitur kategori : fitur yang berisi list barang atau kebutuhan pertanian apa saja yang dijual atau disediakan di aplikasi farm indo
+
 Fitur detail barang : fitur yang berisi penjelasan detail barang yang dijual
+
 Fitur transaksi : fitur yang berisi transaksi customer, antara lain ; list produk beserta keterangan singkatnya, banyak kuantiti yang dibeli, dan total harga yang harus dibayarkan.
+
 Fitur detail transaksi : fitur yang berisi mengenai penambahan atau pengurangan jumlah kuantiti barang yang dibeli
