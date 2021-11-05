@@ -5,18 +5,25 @@ import 'cart_item.dart';
 import 'package:flutter/material.dart';
 
 class CartScreen extends StatefulWidget {
-  const CartScreen({Key? key}) : super(key: key);
+  const CartScreen({Key? key, this.product}) : super(key: key);
+
+  final Product? product;
 
   @override
   _CartScreenState createState() => _CartScreenState();
 }
 
 class _CartScreenState extends State<CartScreen> {
-  final List<Product> products = dataProducts;
+  List<Product> products = [];
   String total = '0';
 
   @override
   void initState() {
+    if (widget.product != null) {
+      products.add(widget.product!);
+    } else {
+      products = dataProducts;
+    }
     super.initState();
     _getTotal();
   }
@@ -31,7 +38,6 @@ class _CartScreenState extends State<CartScreen> {
 
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
       backgroundColor: Colors.green[50],
       appBar: AppBar(

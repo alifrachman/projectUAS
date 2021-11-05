@@ -1,3 +1,4 @@
+import 'package:farm_indo/screens/auth/login_screen.dart';
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -12,6 +13,19 @@ class ProfileScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Profil'),
         centerTitle: true,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.exit_to_app),
+            onPressed: () {
+              Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(
+                    builder: (BuildContext context) => const LoginScreen()),
+                (Route<dynamic> route) => false,
+              );
+            },
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -29,7 +43,7 @@ class ProfileScreen extends StatelessWidget {
                         const SizedBox(height: 18),
                         widgetInformasi(
                           title: 'Nama Lengkap',
-                          value: 'Muhammad Alif Rachman F',
+                          value: 'Muhaman Laden',
                         ),
                         widgetInformasi(
                           title: 'Nomor Telepon',
@@ -37,7 +51,7 @@ class ProfileScreen extends StatelessWidget {
                         ),
                         widgetInformasi(
                           title: 'Alamat Email',
-                          value: 'alifrachman77@gmail.com',
+                          value: 'laden@gmail.com',
                           divider: false,
                         ),
                       ],
@@ -66,7 +80,7 @@ class ProfileScreen extends StatelessWidget {
               topRight: Radius.circular(6),
             ),
             child: Image.network(
-              'https://images.unsplash.com/photo-1544502062-f82887f03d1c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c2lsaG91ZXR0ZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80',
+              'https://avatars.githubusercontent.com/u/5399488?s=400&v=4',
               fit: BoxFit.cover,
             ),
           ),

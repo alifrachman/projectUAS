@@ -1,4 +1,5 @@
 import 'package:farm_indo/models/article.dart';
+
 import 'models/product.dart';
 
 final List<Product> dataProducts = [
@@ -13,25 +14,25 @@ final List<Product> dataProducts = [
   ),
   Product(
     imageUrl:
-      "https://www.tokotrubus.co.id/wp-content/uploads/2020/09/Benih-Cabe-Rawit-SRET.jpg",
+        "https://www.tokotrubus.co.id/wp-content/uploads/2020/09/Benih-Cabe-Rawit-SRET.jpg",
     title: "Bibit Cabe",
-    desc: 'Bibit tanaman cabe adalah benih yang ditanam dan mulai tumbuh dengan usia sekitar  7 hari setelah tanam.  Bibit ini nantikan akan di pindahkan ke lokasi tanam dan dirawat menjadi tanaman dewasa dan diambil hasilnya.',
+    desc: '-',
     price: 20000,
     qty: 1,
   ),
   Product(
     imageUrl:
-        "https://id-test-11.slatic.net/p/4a144da77b0c7c53f9c7188d8d0027b6.jpg",
-    title: "Pestisida 100ml",
-    desc: 'Pestisida atau pembasmi hama adalah bahan yang digunakan untuk mengendalikan, menolak, atau membasmi organisme pengganggu. Nama ini berasal dari pest yang diberi akhiran -cide.',
-    price: 25000,
+        "https://www.ptppi.co.id/wp-content/uploads/2020/11/bg-dharmabas-300x249.png",
+    title: "Pestisida",
+    desc: '-',
+    price: 500000,
     qty: 1,
   ),
   Product(
     imageUrl:
-        "https://belajartani.com/wp-content/uploads/2020/02/knapsack-manual-sprayer.jpg",
+        "https://s3.bukalapak.com/img/8790023386/large/SWAN_HAND_SPRAYER_16_L_MANUAL_ALAT_SEMPROT_HAMA_MTB_16.jpg",
     title: "Alat Semprotan",
-    desc: 'Alat penyemprot merupakan alat aplikator pestisida yang sangat diperlukan dalam rangka pemberantasan dan pengendalian hama & penyakit tumbuhan.',
+    desc: '-',
     price: 200000,
     qty: 1,
   ),

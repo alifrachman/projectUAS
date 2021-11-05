@@ -1,3 +1,5 @@
+import 'package:farm_indo/screens/main/cart/cart_screen.dart';
+
 import '../../../models/product.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +13,7 @@ class ProductDetail extends StatefulWidget {
   @override
   _ProductDetailState createState() => _ProductDetailState();
 }
+
 class _ProductDetailState extends State<ProductDetail> {
   @override
   Widget build(BuildContext context) {
@@ -21,6 +24,18 @@ class _ProductDetailState extends State<ProductDetail> {
       appBar: AppBar(
         centerTitle: true,
         title: const Text('Detail Barang'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.shopping_cart),
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (ctx) => CartScreen(product: widget.product),
+                ),
+              );
+            },
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -41,7 +56,7 @@ class _ProductDetailState extends State<ProductDetail> {
             const SizedBox(height: 18),
             Container(
               width: double.infinity,
-              height: MediaQuery.of(context).size.height * 0.6,
+              height: MediaQuery.of(context).size.height * 0.5,
               decoration: BoxDecoration(
                 borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(50),
@@ -49,7 +64,7 @@ class _ProductDetailState extends State<ProductDetail> {
                 ),
                 color: Colors.green[100],
               ),
-              padding: const EdgeInsets.all(20),
+              padding: const EdgeInsets.all(18),
               child: Column(
                 children: [
                   Text(
@@ -74,34 +89,10 @@ class _ProductDetailState extends State<ProductDetail> {
                       fontSize: 18,
                     ),
                   ),
-                  const SizedBox(height: 10),
-                  
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.4,
-                    child: ElevatedButton(
-                      style: ButtonStyle(
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(18.0),
-                          ),
-                        ),
-                      ),
-                      onPressed: () {
-                        Navigator.of(context).pushNamed(
-                          '/cart',
-                        );
-                      },
-                      child: const Text(
-                        'Add to cart',
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 50),
                 ],
               ),
             ),
-            
           ],
         ),
       ),
