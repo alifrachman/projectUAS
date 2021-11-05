@@ -27,12 +27,22 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 const SizedBox(height: 12),
                 TextFormField(
                   decoration: const InputDecoration(
+                    labelText: 'Nama',
+                  ),
+                ),
+                TextFormField(
+                  decoration: const InputDecoration(
                     labelText: 'Email',
                   ),
                 ),
                 TextFormField(
                   decoration: const InputDecoration(
                     labelText: 'Password',
+                  ),
+                ),
+                TextFormField(
+                  decoration: const InputDecoration(
+                    labelText: 'Ulangi Password',
                   ),
                 ),
                 const SizedBox(height: 24),
