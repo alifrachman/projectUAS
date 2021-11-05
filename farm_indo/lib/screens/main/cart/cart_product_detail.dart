@@ -49,7 +49,7 @@ class _CartProductDetailState extends State<CartProductDetail> {
                 )),
             const SizedBox(height: 18),
             Container(
-              height: MediaQuery.of(context).size.height * 0.5,
+              height: MediaQuery.of(context).size.height * 0.6,
               decoration: BoxDecoration(
                 borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(50),
@@ -154,7 +154,28 @@ class _CartProductDetailState extends State<CartProductDetail> {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 30),
+                  const SizedBox(height: 10),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.5,
+                    child: ElevatedButton(
+                      style: ButtonStyle(
+                        shape:
+                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(18.0),
+                          ),
+                        ),
+                      ),
+                      onPressed: () {
+                        Navigator.of(context).pushNamed(
+                          '/detailbarang');
+                      },
+                      child: const Text(
+                        'Dashboard Barang',
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 10),
                 ],
               ),
             ),

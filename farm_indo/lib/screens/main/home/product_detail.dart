@@ -11,7 +11,6 @@ class ProductDetail extends StatefulWidget {
   @override
   _ProductDetailState createState() => _ProductDetailState();
 }
-
 class _ProductDetailState extends State<ProductDetail> {
   @override
   Widget build(BuildContext context) {
@@ -42,7 +41,7 @@ class _ProductDetailState extends State<ProductDetail> {
             const SizedBox(height: 18),
             Container(
               width: double.infinity,
-              height: MediaQuery.of(context).size.height * 0.5,
+              height: MediaQuery.of(context).size.height * 0.6,
               decoration: BoxDecoration(
                 borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(50),
@@ -75,10 +74,34 @@ class _ProductDetailState extends State<ProductDetail> {
                       fontSize: 18,
                     ),
                   ),
+                  const SizedBox(height: 10),
+                  
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.4,
+                    child: ElevatedButton(
+                      style: ButtonStyle(
+                        shape:
+                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(18.0),
+                          ),
+                        ),
+                      ),
+                      onPressed: () {
+                        Navigator.of(context).pushNamed(
+                          '/cart',
+                        );
+                      },
+                      child: const Text(
+                        'Add to cart',
+                      ),
+                    ),
+                  ),
                   const SizedBox(height: 20),
                 ],
               ),
             ),
+            
           ],
         ),
       ),

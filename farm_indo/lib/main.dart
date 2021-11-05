@@ -1,3 +1,8 @@
+import 'package:farm_indo/screens/main/cart/cart_product_detail.dart';
+import 'package:farm_indo/screens/main/cart/cart_screen.dart';
+import 'package:farm_indo/screens/main/home/home_screen.dart';
+import 'package:farm_indo/screens/main/home/product_detail.dart';
+import 'package:farm_indo/screens/main/home/product_item.dart';
 import 'package:farm_indo/screens/main/main_screen.dart';
 
 import 'package:flutter/material.dart';
@@ -22,6 +27,10 @@ class MyyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       home: const MainScreen(),
+      routes: {
+        '/cart' : (BuildContext ctx) => CartScreen(),
+        '/detailbarang' : (BuildContext ctx) => MainScreen(),
+      },
     );
   }
 }
