@@ -29,25 +29,25 @@ class _ProductItemState extends State<ProductItem> {
         );
       },
       child: Card(
-        margin: const EdgeInsets.only(bottom: 14),
-        color: Colors.green[100],
+        margin: const EdgeInsets.only(bottom: 10),
+        color: Colors.blueGrey[100],
         child: Padding(
-          padding: const EdgeInsets.all(12),
+          padding: const EdgeInsets.all(5),
           child: Row(
             children: [
               Container(
-                color: Colors.grey[200],
-                width: 120,
-                height: 130,
+                color: Colors.blueGrey[100],
+                width: 140,
+                height: 155,
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(5),
                   child: Image.network(
                     widget.product.imageUrl,
                     fit: BoxFit.cover,
                   ),
                 ),
               ),
-              const SizedBox(width: 14),
+              const SizedBox(width: 19),
               Expanded(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -57,14 +57,14 @@ class _ProductItemState extends State<ProductItem> {
                       widget.product.title,
                       style: const TextStyle(
                         fontWeight: FontWeight.w600,
-                        fontSize: 21,
+                        fontSize: 18,
                       ),
                     ),
-                    const SizedBox(height: 4),
+                    const SizedBox(height: 10),
                     Text(
                       'Harga : $formatedPrice',
                       style: const TextStyle(
-                        fontSize: 17,
+                        fontSize: 15,
                       ),
                     ),
                   ],

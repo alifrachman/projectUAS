@@ -19,21 +19,22 @@ class _CartScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green[50],
+      backgroundColor: Colors.blueGrey[200],
       appBar: AppBar(
         centerTitle: true,
         title: const Text('Farm Indo'),
+        automaticallyImplyLeading: false,
       ),
       body: SingleChildScrollView(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            SizedBox(
-              height: 200.0,
+            SizedBox(    
+              height: 109.0,
               child: ListView.builder(
                 physics: const ClampingScrollPhysics(),
-                padding: const EdgeInsets.all(18),
+                padding: const EdgeInsets.all(13),
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
                 itemCount: articles.length,
@@ -44,23 +45,24 @@ class _CartScreenState extends State<HomeScreen> {
             ),
             const Padding(
               padding: EdgeInsets.symmetric(
-                horizontal: 18,
+                horizontal: 12,
               ),
               child: Text(
                 'Produk Terbaru',
                 style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w600,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w700,
                 ),
               ),
             ),
+            
             SizedBox(
               height: products.length * 180.0,
               child: ListView.builder(
                 physics: const NeverScrollableScrollPhysics(),
                 padding: const EdgeInsets.symmetric(
-                  horizontal: 18,
-                  vertical: 14,
+                  horizontal: 12,
+                  vertical: 16,
                 ),
                 shrinkWrap: true,
                 itemCount: products.length,
@@ -80,14 +82,10 @@ class _CartScreenState extends State<HomeScreen> {
       width: MediaQuery.of(context).size.width - 50,
       child: Stack(
         children: [
-          Container(
+          Container(             
             height: 200,
             width: double.infinity,
             margin: const EdgeInsets.only(right: 14),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(6),
-              color: Colors.grey[200],
-            ),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(6),
               child: Image.network(
@@ -121,6 +119,7 @@ class _CartScreenState extends State<HomeScreen> {
                   style: const TextStyle(
                     color: Colors.white,
                     fontSize: 18,
+                    
                   ),
                 ),
               ),

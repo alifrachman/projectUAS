@@ -16,23 +16,23 @@ final List<Product> dataProducts = [
     imageUrl:
         "https://www.tokotrubus.co.id/wp-content/uploads/2020/09/Benih-Cabe-Rawit-SRET.jpg",
     title: "Bibit Cabe",
-    desc: '-',
+    desc: 'Bibit tanaman cabe adalah benih yang ditanam dan mulai tumbuh dengan usia sekitar  7 hari setelah tanam.  Bibit ini nantikan akan di pindahkan ke lokasi tanam dan dirawat menjadi tanaman dewasa dan diambil hasilnya.',
     price: 20000,
     qty: 1,
   ),
   Product(
     imageUrl:
-        "https://www.ptppi.co.id/wp-content/uploads/2020/11/bg-dharmabas-300x249.png",
+        "https://id-test-11.slatic.net/p/4a144da77b0c7c53f9c7188d8d0027b6.jpg",
     title: "Pestisida",
-    desc: '-',
-    price: 500000,
+    desc: 'Pestisida memiliki fungsi untuk mengatur maupun merangsang tumbuhnya tanaman. Pestisida juga bisa mencegah hama-hama air selain hama darat dan binatang pengganggu seperti ular. Termasuk memberantas binatang yang menyebabkan penyakit pada manusia. ',
+    price: 25000,
     qty: 1,
   ),
   Product(
     imageUrl:
         "https://s3.bukalapak.com/img/8790023386/large/SWAN_HAND_SPRAYER_16_L_MANUAL_ALAT_SEMPROT_HAMA_MTB_16.jpg",
     title: "Alat Semprotan",
-    desc: '-',
+    desc: 'Alat ini digunakan untuk mengaplikasikan bahan kimia aktif seperti pestisida yang berfungsi untuk memberantas hama dan penyakit tanaman lainnya.',
     price: 200000,
     qty: 1,
   ),
@@ -41,7 +41,7 @@ final List<Product> dataProducts = [
 final List<Article> dataArticles = [
   Article(
     imageUrl:
-        "https://ik.imagekit.io/carro/jualo/original/29446740/image_20210129-1581-759juo.jpg?v=1611891127",
+        "https://cdn1-production-images-kly.akamaized.net/IkAj2Wzjoa-6MrUHzXrBrHzhxGk=/1280x720/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/3298227/original/057619800_1605584039-gardening-690940_640.jpg",
     title: "Rekomendasi pupuk untuk tanaman",
   ),
   Article(

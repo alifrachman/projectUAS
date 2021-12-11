@@ -1,4 +1,3 @@
-import 'package:farm_indo/screens/main/cart/cart_screen.dart';
 
 import '../../../models/product.dart';
 import 'package:flutter/material.dart';
@@ -20,23 +19,7 @@ class _ProductDetailState extends State<ProductDetail> {
     final String formatedPrice = formatRP(widget.product.price);
 
     return Scaffold(
-      backgroundColor: Colors.green[50],
-      appBar: AppBar(
-        centerTitle: true,
-        title: const Text('Detail Barang'),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.shopping_cart),
-            onPressed: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (ctx) => CartScreen(product: widget.product),
-                ),
-              );
-            },
-          ),
-        ],
-      ),
+      backgroundColor: Colors.green[10],
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -44,7 +27,7 @@ class _ProductDetailState extends State<ProductDetail> {
                 padding: const EdgeInsets.all(18),
                 child: SizedBox(
                   width: double.infinity,
-                  height: 300,
+                  height: 340,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(12),
                     child: Image.network(
@@ -53,16 +36,16 @@ class _ProductDetailState extends State<ProductDetail> {
                     ),
                   ),
                 )),
-            const SizedBox(height: 18),
+            const SizedBox(height: 5),
             Container(
               width: double.infinity,
-              height: MediaQuery.of(context).size.height * 0.5,
+              height: MediaQuery.of(context).size.height * 0.4,
               decoration: BoxDecoration(
                 borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(50),
                   topRight: Radius.circular(50),
                 ),
-                color: Colors.green[100],
+                color: Colors.blueGrey[100],
               ),
               padding: const EdgeInsets.all(18),
               child: Column(
@@ -71,14 +54,14 @@ class _ProductDetailState extends State<ProductDetail> {
                     widget.product.title,
                     style: const TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: 24,
+                      fontSize: 22,
                     ),
                   ),
-                  const SizedBox(height: 8),
+                  const SizedBox(height: 10),
                   Text(
                     'Harga : $formatedPrice / Barang',
                     style: const TextStyle(
-                      fontSize: 18,
+                      fontSize: 16,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
@@ -86,10 +69,10 @@ class _ProductDetailState extends State<ProductDetail> {
                   Text(
                     widget.product.desc,
                     style: const TextStyle(
-                      fontSize: 18,
+                      fontSize: 15,
                     ),
                   ),
-                  const SizedBox(height: 50),
+                  const SizedBox(height: 10),
                 ],
               ),
             ),

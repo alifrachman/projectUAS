@@ -39,10 +39,11 @@ class _CartScreenState extends State<CartScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green[50],
+      backgroundColor: Colors.blueGrey[200],
       appBar: AppBar(
         centerTitle: true,
         title: const Text('Transaksi'),
+        automaticallyImplyLeading: false,
       ),
       body: Column(
         children: [
@@ -69,9 +70,9 @@ class _CartScreenState extends State<CartScreen> {
             ),
           ),
           Container(
-            color: Colors.green,
+            color: Colors.blueGrey[800],
             width: double.infinity,
-            height: 50,
+            height: 48,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [

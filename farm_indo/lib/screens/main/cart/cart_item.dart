@@ -22,18 +22,18 @@ class _CartItemState extends State<CartItem> {
     return GestureDetector(
       onTap: () => onDetailTap(context),
       child: Card(
-        margin: const EdgeInsets.only(bottom: 14),
-        color: Colors.green[100],
+        margin: const EdgeInsets.only(bottom: 10),
+        color: Colors.blueGrey[100],
         child: Padding(
-          padding: const EdgeInsets.all(12),
+          padding: const EdgeInsets.all(5),
           child: Row(
             children: [
               Container(
-                color: Colors.grey[200],
-                width: 120,
-                height: 130,
+                color: Colors.blueGrey[100],
+                width: 147,
+                height: 160,
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(5),
                   child: Image.network(
                     widget.product.imageUrl,
                     fit: BoxFit.cover,
@@ -50,14 +50,14 @@ class _CartItemState extends State<CartItem> {
                       widget.product.title,
                       style: const TextStyle(
                         fontWeight: FontWeight.w600,
-                        fontSize: 21,
+                        fontSize: 18,
                       ),
                     ),
-                    const SizedBox(height: 4),
+                    const SizedBox(height: 10),
                     Text(
                       'Harga : $formatedPrice',
                       style: const TextStyle(
-                        fontSize: 17,
+                        fontSize: 15,
                       ),
                     ),
                     const SizedBox(height: 20),

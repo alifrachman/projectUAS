@@ -12,7 +12,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green[50],
+      backgroundColor: Colors.blueGrey[800],
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(18.0),
@@ -22,27 +22,58 @@ class _RegisterScreenState extends State<RegisterScreen> {
               children: [
                 Text(
                   'Register',
-                  style: Theme.of(context).textTheme.headline5,
+                  style: TextStyle(
+                    color: Colors.grey[100],
+                    fontSize: 20,
+                    fontWeight: FontWeight.w700,
+                  ),
                 ),
-                const SizedBox(height: 12),
+                const SizedBox(height: 20),
                 TextFormField(
                   decoration: const InputDecoration(
                     labelText: 'Nama',
+                    filled: true,
+                    fillColor: Colors.white,
+                    prefixIcon: Icon(
+                      Icons.person,
+                      size: 22,
+                      ),
                   ),
                 ),
+                const SizedBox(height: 10),
                 TextFormField(
                   decoration: const InputDecoration(
                     labelText: 'Email',
+                    filled: true,
+                    fillColor: Colors.white,
+                    prefixIcon: Icon(
+                      Icons.alternate_email_outlined,
+                      size: 20,
+                      ),
                   ),
                 ),
+                const SizedBox(height: 10),
                 TextFormField(
                   decoration: const InputDecoration(
                     labelText: 'Password',
+                    filled: true,
+                    fillColor: Colors.white,
+                    prefixIcon: Icon(
+                      Icons.lock,
+                      size: 20,
+                      ),
                   ),
                 ),
+                const SizedBox(height: 10),
                 TextFormField(
                   decoration: const InputDecoration(
                     labelText: 'Ulangi Password',
+                    filled: true,
+                    fillColor: Colors.white,
+                    prefixIcon: Icon(
+                      Icons.lock,
+                      size: 20,
+                      ),
                   ),
                 ),
                 const SizedBox(height: 24),
@@ -56,7 +87,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       child: Text(
                         'Login',
                         style: TextStyle(
-                          color: Colors.grey[700],
+                          color: Colors.grey[100],
                           fontSize: 16,
                         ),
                       ),

@@ -9,10 +9,11 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green[50],
+      backgroundColor: Colors.green[10],
       appBar: AppBar(
         title: const Text('Profil'),
         centerTitle: true,
+        automaticallyImplyLeading: false,
         actions: [
           IconButton(
             icon: const Icon(Icons.exit_to_app),
@@ -35,7 +36,7 @@ class ProfileScreen extends StatelessWidget {
               children: [
                 viewGambar(),
                 Container(
-                  color: Colors.green[100],
+                  color: Colors.blueGrey[100],
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 18),
                     child: Column(
@@ -43,7 +44,7 @@ class ProfileScreen extends StatelessWidget {
                         const SizedBox(height: 18),
                         widgetInformasi(
                           title: 'Nama Lengkap',
-                          value: 'Muhaman Laden',
+                          value: 'Muhammad Alif Rachman F',
                         ),
                         widgetInformasi(
                           title: 'Nomor Telepon',
@@ -51,7 +52,7 @@ class ProfileScreen extends StatelessWidget {
                         ),
                         widgetInformasi(
                           title: 'Alamat Email',
-                          value: 'laden@gmail.com',
+                          value: 'alifrachman77@gmail.com',
                           divider: false,
                         ),
                       ],
@@ -80,7 +81,7 @@ class ProfileScreen extends StatelessWidget {
               topRight: Radius.circular(6),
             ),
             child: Image.network(
-              'https://avatars.githubusercontent.com/u/5399488?s=400&v=4',
+              'https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/library/wp-content/uploads/2015/03/adjust-tie.jpeg',
               fit: BoxFit.cover,
             ),
           ),

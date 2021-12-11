@@ -26,7 +26,7 @@ class _CartProductDetailState extends State<CartProductDetail> {
     final String formatedPrice = formatRP(widget.product.price);
 
     return Scaffold(
-      backgroundColor: Colors.green[50],
+      backgroundColor: Colors.green[10],
       appBar: AppBar(
         centerTitle: true,
         title: const Text('Detail Transaksi'),
@@ -49,13 +49,13 @@ class _CartProductDetailState extends State<CartProductDetail> {
                 )),
             const SizedBox(height: 18),
             Container(
-              height: MediaQuery.of(context).size.height * 0.5,
+              height: MediaQuery.of(context).size.height * 0.7,
               decoration: BoxDecoration(
                 borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(50),
                   topRight: Radius.circular(50),
                 ),
-                color: Colors.green[100],
+                color: Colors.blueGrey[100],
               ),
               padding: const EdgeInsets.all(18),
               child: Column(
@@ -64,18 +64,25 @@ class _CartProductDetailState extends State<CartProductDetail> {
                     widget.product.title,
                     style: const TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: 24,
+                      fontSize: 22,
                     ),
                   ),
-                  const SizedBox(height: 8),
+                  const SizedBox(height: 10),
                   Text(
                     'Harga : $formatedPrice / Barang',
                     style: const TextStyle(
-                      fontSize: 18,
+                      fontSize: 15,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
                   const SizedBox(height: 20),
+                  Text(
+                    widget.product.desc,
+                    style: const TextStyle(
+                      fontSize: 15,
+                    ),
+                  ),
+                  const SizedBox(height: 30),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 30),
                     child: Row(
@@ -86,11 +93,11 @@ class _CartProductDetailState extends State<CartProductDetail> {
                           child: ElevatedButton(
                             style: ButtonStyle(
                               backgroundColor:
-                                  MaterialStateProperty.all(Colors.orange[800]),
+                                  MaterialStateProperty.all(Colors.blueGrey),
                               shape: MaterialStateProperty.all<
                                   RoundedRectangleBorder>(
                                 RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(18.0),
+                                  borderRadius: BorderRadius.circular(20.0),
                                 ),
                               ),
                             ),
@@ -107,7 +114,7 @@ class _CartProductDetailState extends State<CartProductDetail> {
                         Text(
                           'Qty : $qty',
                           style: const TextStyle(
-                            fontSize: 18,
+                            fontSize: 16,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -116,7 +123,7 @@ class _CartProductDetailState extends State<CartProductDetail> {
                           child: ElevatedButton(
                             style: ButtonStyle(
                               backgroundColor:
-                                  MaterialStateProperty.all(Colors.orange[800]),
+                                  MaterialStateProperty.all(Colors.blueGrey),
                               shape: MaterialStateProperty.all<
                                   RoundedRectangleBorder>(
                                 RoundedRectangleBorder(
@@ -136,7 +143,7 @@ class _CartProductDetailState extends State<CartProductDetail> {
                     ),
                   ),
                   SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.4,
+                    width: MediaQuery.of(context).size.width * 0.3,
                     child: ElevatedButton(
                       style: ButtonStyle(
                         shape:
@@ -154,7 +161,7 @@ class _CartProductDetailState extends State<CartProductDetail> {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 50),
+                  const SizedBox(height: 20),
                 ],
               ),
             ),
