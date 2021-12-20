@@ -86,14 +86,19 @@ class _CartScreenState extends State<HomeScreen> {
             height: 200,
             width: double.infinity,
             margin: const EdgeInsets.only(right: 14),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(6),
-              child: Image.network(
-                articles[index].imageUrl,
-                fit: BoxFit.cover,
+            child: InkWell(
+              onTap: (){
+                Navigator.of(context).pushNamed('/info');
+              },
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(6),
+                child: Image.network(
+                  articles[index].imageUrl,
+                  fit: BoxFit.cover,
               ),
             ),
           ),
+        ),
           Positioned(
             bottom: 0,
             width: MediaQuery.of(context).size.width - 64,
@@ -113,12 +118,12 @@ class _CartScreenState extends State<HomeScreen> {
                 ),
               ),
               child: Padding(
-                padding: const EdgeInsets.all(14),
+                padding: const EdgeInsets.all(10),
                 child: Text(
                   articles[index].title,
                   style: const TextStyle(
                     color: Colors.white,
-                    fontSize: 18,
+                    fontSize: 15,
                     
                   ),
                 ),
