@@ -73,9 +73,13 @@ class _CartScreenState extends State<CartScreen> {
             color: Colors.blueGrey[800],
             width: double.infinity,
             height: 48,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
+            child: InkWell(
+              onTap: (){
+                Navigator.of(context).pushNamed('/checkout');
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
                 const Text(
                   'Total',
                   style: TextStyle(
@@ -94,6 +98,7 @@ class _CartScreenState extends State<CartScreen> {
                 ),
               ],
             ),
+          ),
           ),
         ],
       ),
