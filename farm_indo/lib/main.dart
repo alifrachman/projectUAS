@@ -1,6 +1,7 @@
 import 'package:farm_indo/screens/auth/login_screen.dart';
+import 'package:farm_indo/screens/main/cart/checkout_transaksi.dart';
+import 'package:farm_indo/screens/main/home/info_article.dart';
 import 'package:farm_indo/screens/main/main_screen.dart';
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -23,6 +24,10 @@ class MyyApp extends StatelessWidget {
       ),
       home: const LoginScreen(),
       debugShowCheckedModeBanner: false,
+      routes: {
+      '/checkout' : (BuildContext ctx) => Checkout(),
+      '/info' : (BuildContext ctx) => infoarticle(),
+      },
       );
     }
 }
